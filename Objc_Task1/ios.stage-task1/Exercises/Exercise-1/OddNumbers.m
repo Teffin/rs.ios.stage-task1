@@ -11,7 +11,14 @@
 @implementation OddNumbers
 
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
-    return -1;
+    NSInteger oddCount = 0;
+
+    for (NSNumber *i in array) {
+        if ([i intValue] % 2 != 0) {
+            oddCount += 1;
+        }
+    }
+    return oddCount;
 }
 
 @end
